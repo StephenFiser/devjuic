@@ -91,12 +91,13 @@ p {
 
 .hero-unit {
 	background-color: transparent;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-	h1 {
-		font-size:  6em;
-	}
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	h1 { color: white; font-size:  6em; }
+	h3 { color: $blue; }
+	q { font-size: 2em; color: white; }
+	a { color: black; }
 }
 
 
