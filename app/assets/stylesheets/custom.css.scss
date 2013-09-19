@@ -3,11 +3,10 @@
 /* colors and mixins*/
 
 $aqua: #4FE9FF;
-$deepAqua: #0378A6;
-$blue: #023E73;
-$darkBlue: #011C40;
-$navy: #010D26;
-$yellow: #F7F138;
+$lightBlue: #97D2E2;
+$purple: #73335A;
+$lightPurple: #7D586E;
+$blue: #00445B;
 $gray: #909090;
 $grayLight: #B8B8B8;
 $grayLighter: #e8e8e8;
@@ -20,8 +19,9 @@ $grayLighter: #e8e8e8;
 
 /* universal */
 
+html, body {font-family: 'Oxygen', sans-serif;}
 html { overflow-y: scroll; }
-body { padding-top: 60px; background-color: $yellow;}
+body { padding-top: 60px; background-color: $lightBlue;}
 section { overflow: auto; }
 input[type="text"], input[type="password"] { height: 40px; }
 textarea { resize: vertical; }
@@ -32,7 +32,7 @@ textarea { resize: vertical; }
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6, { line-height: 1; color: $navy;}
+h1, h2, h3, h4, h5, h6, { line-height: 1;}
 h1 { font-size: 3em; 
 	letter-spacing: -2px; 
 	margin-bottom: 30px; 
@@ -55,18 +55,24 @@ p {
 /* header */
 
 .navbar .nav li a {
-	color: $deepAqua;
+	color: $lightBlue;
 	&:hover {
 		color: $aqua;
 	}
+}
+
+.navbar-inner {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background-image: none;
 }
 
 #logo {
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
-	color: $deepAqua;
-	text-transform: uppercase;
+	color: $lightBlue;
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
@@ -84,7 +90,6 @@ p {
 }
 
 .hero-unit {
-	color: $navy;
 	background-color: transparent;
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
