@@ -1,0 +1,97 @@
+@import "bootstrap";
+
+/* colors and mixins*/
+
+$aqua: #4FE9FF;
+$deepAqua: #0378A6;
+$blue: #023E73;
+$darkBlue: #011C40;
+$navy: #010D26;
+$yellow: #F7F138;
+$gray: #909090;
+$grayLight: #B8B8B8;
+$grayLighter: #e8e8e8;
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* universal */
+
+html { overflow-y: scroll; }
+body { padding-top: 60px; background-color: $yellow;}
+section { overflow: auto; }
+input[type="text"], input[type="password"] { height: 40px; }
+textarea { resize: vertical; }
+.center { 
+	text-align: center;
+	h1{ margin-bottom: 10px; }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6, { line-height: 1; color: $navy;}
+h1 { font-size: 3em; 
+	letter-spacing: -2px; 
+	margin-bottom: 30px; 
+}
+
+h2 { font-size: 1.7em; 
+	letter-spacing: -2px; 
+	margin-bottom: 30px; 
+	text-align: center; 
+	font-weight: normal; 
+	color: #999;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+
+/* header */
+
+.navbar .nav li a {
+	color: $deepAqua;
+	&:hover {
+		color: $aqua;
+	}
+}
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: $deepAqua;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+	&:hover {
+		color: $aqua;
+		text-decoration: none;
+	}
+}
+
+/* body */
+
+.roomUpTop {
+	margin-top: 60px;
+}
+
+.hero-unit {
+	color: $navy;
+	background-color: transparent;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	h1 {
+		font-size:  6em;
+	}
+}
+
+
