@@ -2,14 +2,16 @@
 
 /* colors and mixins*/
 
-$aqua: #4FE9FF;
-$lightBlue: #97D2E2;
-$purple: #73335A;
-$lightPurple: #7D586E;
-$blue: #00445B;
+/* oranges */
+$lightOrange: #FFD37E;
+$orange: #FFBB1D;
+$darkOrange: #B27502;
+
+/* grays */
 $gray: #909090;
 $grayLight: #B8B8B8;
 $grayLighter: #e8e8e8;
+$darkGray: #333;
 
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
@@ -21,7 +23,7 @@ $grayLighter: #e8e8e8;
 
 html, body {font-family: 'Oxygen', sans-serif;}
 html { overflow-y: scroll; }
-body { padding-top: 60px; background-color: $lightBlue;}
+body { padding-top: 60px; background-color: $grayLighter;}
 section { overflow: auto; }
 input[type="text"], input[type="password"] { height: 40px; }
 textarea { resize: vertical; }
@@ -54,33 +56,34 @@ p {
 
 /* header */
 
-.navbar .nav li a {
-	color: $lightBlue;
+.navbar .nav li {
+	border-left: 1px solid $gray;
 	&:hover {
-		color: $aqua;
+		background-color: $gray;
+	}
+	a {
+		color: $grayLighter;
+		text-shadow: none;
+		&:hover {
+			color: $orange;
+		}
 	}
 }
 
-.navbar-inner {
+.navbar-fixed-top .navbar-inner {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 	background-image: none;
+	background-color: $darkGray;
+	border-bottom: 1px solid $darkGray;
 }
 
 #logo {
 	float: left;
 	margin-right: 10px;
-	font-size: 1.7em;
-	color: $lightBlue;
-	letter-spacing: -1px;
-	padding-top: 9px;
-	font-weight: bold;
-	line-height: 1;
-	&:hover {
-		color: $aqua;
-		text-decoration: none;
-	}
+	padding-top: 6px;
+	width: 130px;
 }
 
 /* body */
@@ -90,14 +93,26 @@ p {
 }
 
 .hero-unit {
+	padding-left: 0px;
 	background-color: transparent;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
-	border-radius: 10px;
-	h1 { color: white; font-size:  6em; }
-	h3 { color: $blue; }
-	q { font-size: 2em; color: white; }
-	a { color: black; }
+	border-radius: 0px;
+	.text_for_hero {
+		float: left;
+		h1 { font-size:  6em; padding-left: 0px;}
+		h3 { color: $gray; }
+		q { font-size: 1.5em; }
+		a { 
+			color: $darkGray; 
+			&:hover { text-decoration: none; color: $orange; }
+		}
+	}
+	
+	#beaker {
+		float: right;
+		width: 200px;
+	}
 }
 
 
