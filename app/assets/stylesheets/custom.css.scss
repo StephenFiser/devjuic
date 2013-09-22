@@ -86,7 +86,7 @@ p {
 	width: 130px;
 }
 
-/* body */
+/* home page */
 
 .roomUpTop {
 	margin-top: 60px;
@@ -114,5 +114,23 @@ p {
 		width: 200px;
 	}
 }
+
+/* posts index page */
+
+.post-overview {
+	padding: 10px;
+	background-color: white;
+	border: 1px solid $darkGray;
+	height: 65px;
+	.gray {
+		color: $gray;
+	}
+	h3, h5 {
+		margin-top: -3px;
+		margin-bottom: 8px;
+	}
+}
+
+
 
 

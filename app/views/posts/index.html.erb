@@ -1,25 +1,29 @@
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="row post-overview">
+    <div class="span1">
+      <%= gravatar_for current_user %>
+     
+    </div>
+    <div class="span8">
+      <h3><%= link_to post.title, post_path(post) %></h3>
+      <h5><%= post.description %></h5>
+        <p>
+          Posted by <span class="gray"><%= post.author %></span> 
+          on <span class="gray"><%= post.day_created %></span>
+        </p>
+    </div>
+
+   
+  </div>
+    
+      
+    <!--   <%= link_to 'Show', post %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+    
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>

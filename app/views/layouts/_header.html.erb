@@ -6,7 +6,7 @@
 				<ul class="nav pull-right">
 					<li><%= link_to "Home", root_path %></li>
 					<li><%= link_to "Lab", "#" %></li>
-					<li><%= link_to "Blog", "#" %></li>
+					<li><%= link_to "Blog", posts_path %></li>
 					<li><%= link_to "Contact", "#" %></li>
 					<% if user_signed_in? %>
 						<li><a href="#">Hello, <%= current_user.first_name %></a></li>
