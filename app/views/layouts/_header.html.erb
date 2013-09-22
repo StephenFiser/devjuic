@@ -8,6 +8,12 @@
 					<li><%= link_to "Lab", "#" %></li>
 					<li><%= link_to "Blog", "#" %></li>
 					<li><%= link_to "Contact", "#" %></li>
+					<% if user_signed_in? %>
+						<li><a href="#">Hello, <%= current_user.first_name %></a></li>
+						<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+					<% else %>
+						<li><%= link_to "Login", new_user_session_path %></li>
+					<% end %>
 				</ul>
 			</nav>
 		</div>
