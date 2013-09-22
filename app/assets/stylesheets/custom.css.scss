@@ -59,7 +59,7 @@ p {
 .navbar .nav li {
 	border-left: 1px solid $gray;
 	&:hover {
-		background-color: $gray;
+		background-color: #3a3a3a;
 	}
 	a {
 		color: $grayLighter;
@@ -102,7 +102,7 @@ p {
 		float: left;
 		h1 { font-size:  6em; padding-left: 0px;}
 		h3 { color: $gray; }
-		q { font-size: 1.5em; }
+		q { font-size: 1.5em; color: $darkGray;}
 		a { 
 			color: $darkGray; 
 			&:hover { text-decoration: none; color: $orange; }
