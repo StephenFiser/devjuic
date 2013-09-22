@@ -6,7 +6,11 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
 
   def author
-  	user.first_name + ' ' + user.last_name
+  	user
+  end
+
+  def author_name
+  	author.first_name + ' ' + author.last_name
   end
 
   def day_created

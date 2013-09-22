@@ -12,6 +12,7 @@ $gray: #909090;
 $grayLight: #B8B8B8;
 $grayLighter: #e8e8e8;
 $darkGray: #333;
+$superLight: #f8f8f8;
 
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
@@ -25,7 +26,7 @@ html, body {font-family: 'Oxygen', sans-serif;}
 html { overflow-y: scroll; }
 body { padding-top: 60px; background-color: $grayLighter;}
 section { overflow: auto; }
-input[type="text"], input[type="password"] { height: 40px; }
+input[type="text"], input[type="password"], input[type="email"] { height: 25px; }
 textarea { resize: vertical; }
 .center { 
 	text-align: center;
@@ -119,8 +120,13 @@ p {
 
 .post-overview {
 	padding: 10px;
-	background-color: white;
-	border: 1px solid $darkGray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: $superLight;
+	&:hover {
+		background-color: white;
+	}
+	border: 1px solid $grayLight;
 	height: 65px;
 	.gray {
 		color: $gray;
@@ -128,6 +134,20 @@ p {
 	h3, h5 {
 		margin-top: -3px;
 		margin-bottom: 8px;
+	}
+	a {
+		color: $orange;
+		&:hover {
+			text-decoration: none;
+			color: $lightOrange;
+		}
+	}
+	img {
+		margin-left: -8px;
+	}
+	p {
+		margin-top: -4px;
+		font-size: 12px;
 	}
 }
 

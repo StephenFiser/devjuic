@@ -2,14 +2,14 @@
 <% @posts.each do |post| %>
   <div class="row post-overview">
     <div class="span1">
-      <%= gravatar_for current_user %>
+      <%= gravatar_for post.author %>
      
     </div>
-    <div class="span8">
+    <div class="span10">
       <h3><%= link_to post.title, post_path(post) %></h3>
       <h5><%= post.description %></h5>
         <p>
-          Posted by <span class="gray"><%= post.author %></span> 
+          Posted by <span class="gray"><%= post.author_name %></span> 
           on <span class="gray"><%= post.day_created %></span>
         </p>
     </div>
