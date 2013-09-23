@@ -158,5 +158,33 @@ p {
 	background-color: white;
 }
 
+/* sign in page */
+
+.sign-in {
+	input[type="email"], input[type="password"] { width: 350px; height: 30px;}
+	h1 {
+		margin-bottom: 40px;
+	}
+	.buttons {
+		width: 350px;
+		margin: 0 auto;
+		.links {
+			width: 200px;
+			label {
+				margin-right: 6px;
+				margin-top: -7px;
+			}
+			input[type="checkbox"] { margin-top: -2px; }
+			a {
+				float: left;
+				font-size: 15px;
+				color: $darkGray;
+				margin-top: -20px;
+			}
+
+		}
+	}
+}
+
 
 
