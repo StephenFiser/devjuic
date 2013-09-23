@@ -5,6 +5,9 @@ Devjuic::Application.routes.draw do
   devise_for :users
 
   root to: 'static_pages#index'
+
+  match '/lab', to: 'static_pages#lab'
+  match '/contact', to: 'static_pages#contact'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
