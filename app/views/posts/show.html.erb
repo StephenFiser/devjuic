@@ -5,7 +5,7 @@
 </div>
 <div class="row post-content">
 	<div class="span10">
-		<p><%= simple_format @post.content %></p>
+		<p><%= simple_format(@post.content, {}, sanitize: false) %></p>
 	</div>
 </div>
   
