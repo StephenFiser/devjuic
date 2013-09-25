@@ -1,4 +1,6 @@
-
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-large btn-primary" %>
+<% end %>
 <% @posts.each do |post| %>
   <div class="row post-overview">
     <div class="span1">
@@ -24,6 +26,3 @@
     
 <% end %>
 
-<% if user_signed_in? %>
-  <%= link_to 'New Post', new_post_path %>
-<% end %>

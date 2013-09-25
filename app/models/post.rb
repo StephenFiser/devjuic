@@ -6,6 +6,10 @@ class Post < ActiveRecord::Base
   validates :content, presence: true
   validates :title, presence: true
 
+  def self.order_by_most_recent
+    order("created_at DESC").all
+  end
+
   def author
   	user
   end
