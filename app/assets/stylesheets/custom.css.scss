@@ -2,10 +2,13 @@
 
 /* colors and mixins*/
 
+/* blues */
+$teal: #0088cc;
+
 /* oranges */
 $lightOrange: #FFD37E;
 $orange: #FFBB1D;
-$darkOrange: #B27502;
+$darkOrange: #D99F19;
 
 /* grays */
 $gray: #909090;
@@ -54,6 +57,10 @@ p {
 	line-height: 1.7em;
 }
 
+.code {
+	font-family: Arial, sans-serif;
+	color: $teal;
+}
 
 /* header */
 
