@@ -8,6 +8,7 @@ Devjuic::Application.routes.draw do
 
   match '/lab', to: 'static_pages#lab'
   match '/contact', to: 'static_pages#contact'
+  match '/characters', to: 'characters#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

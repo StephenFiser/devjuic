@@ -1,4 +1,5 @@
 class ExperimentsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   # GET /experiments
   # GET /experiments.json
   def index

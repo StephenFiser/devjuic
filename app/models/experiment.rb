@@ -1,4 +1,5 @@
 class Experiment < ActiveRecord::Base
+  
   attr_accessible :description, :index_link, :title
   belongs_to :user
 
