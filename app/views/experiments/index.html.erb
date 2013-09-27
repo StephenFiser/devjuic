@@ -1,0 +1,24 @@
+
+<% @experiments.each do |experiment| %>
+  <div class="row post-overview">
+    <div class="span1">
+      <%= gravatar_for experiment.author %>
+     
+    </div>
+    <div class="span10">
+      <h3><%= experiment.title %></h3>
+      <h5><%= experiment.description %></h5>
+        <p>
+          Created by <span class="gray"><%= experiment.author_name %></span> 
+          on <span class="gray"><%= experiment.day_created %></span>
+        </p>
+    </div>
+
+   
+  </div>
+
+<% end %>
+<br/>
+
+<%= link_to 'New Experiment', new_experiment_path %>
+

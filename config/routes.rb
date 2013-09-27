@@ -1,6 +1,6 @@
 Devjuic::Application.routes.draw do
+  resources :experiments
   resources :posts
-
 
   devise_for :users
 

@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   attr_accessible :content, :title, :description
   belongs_to :user
-  has_many :comments
+  # has_many :comments
   validates :description, presence: true, length: { maximum: 90 }
   validates :content, presence: true
   validates :title, presence: true
