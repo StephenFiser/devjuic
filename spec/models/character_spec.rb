@@ -12,13 +12,14 @@ describe Character do
 	describe "#most_occurring" do
 		it "should calculate most occurring character in given string" do
 			char = Character.new("aaa bb c")
-			char.most_occurring.should eq([:a, 3])
+			char.most_occurring.should eq("a")
 		end
 	end
 
-	# describe "#least_occurring" do
-	# 	it "should calculate least occurring character in given string" do
-
-	# 	end
-	# end
+	describe "#least_occurring" do
+		it "should calculate least occurring character in given string" do
+			char = Character.new("aaa bb c")
+			char.least_occurring.should eq("c")
+		end
+	end
 end

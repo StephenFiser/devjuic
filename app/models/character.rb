@@ -13,10 +13,20 @@ class Character
 		count = {}
 		@input_text.split(//).each do |c|
 			unless c.blank?
-				x = c.to_sym
-				count.has_key?(x) ? count[x] += 1 : count[x] = 1
+				count.has_key?(c) ? count[c] += 1 : count[c] = 1
 			end
 		end
-		count.largest_hash_key 
+		count.largest_key.first
 	end
+
+	def least_occurring
+		count = {}
+		@input_text.split(//).each do |c|
+			unless c.blank?
+				count.has_key?(c) ? count[c] += 1 : count[c] = 1
+			end
+		end
+		count.smallest_key.first
+	end
+
 end
