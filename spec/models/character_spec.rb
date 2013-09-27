@@ -9,17 +9,17 @@ describe Character do
 	end
 
 
-	describe "#most_occurring" do
+	describe "#largest_frequency" do
 		it "should calculate most occurring character in given string" do
 			char = Character.new("aaa bb c")
-			char.most_occurring.should eq("a")
+			char.largest_frequency.should eq("a")
 		end
 	end
 
-	describe "#least_occurring" do
+	describe "#smallest_frequency" do
 		it "should calculate least occurring character in given string" do
 			char = Character.new("aaa bb c")
-			char.least_occurring.should eq("c")
+			char.smallest_frequency.should eq("c")
 		end
 	end
 end
