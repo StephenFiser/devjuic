@@ -5,6 +5,9 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 	var Customer = $resource('/customers/:id', {id: '@id'});
 
 	$scope.customers = Customer.query();
+
+	$scope.totalCustomers = $scope.customers.length;
+
 	console.log("here")
 
 	$scope.createCustomer = function() {
