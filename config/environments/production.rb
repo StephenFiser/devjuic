@@ -3,7 +3,6 @@ Devjuic::Application.configure do
 
   # Code is not reloaded between requests
   config.cache_classes = true
-  config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(mangle: false) }
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
