@@ -1,6 +1,6 @@
 app = angular.module("Store", ["ngResource"]);
 
-app.controller('CustomerCtrl', function($scope, $resource) {
+app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resource) {
 
 	var Customer = $resource('/customers/:id', {id: '@id'});
 
@@ -32,4 +32,4 @@ app.controller('CustomerCtrl', function($scope, $resource) {
 	    return 1;
 	  return 0;
 	}
-});
+}]);
