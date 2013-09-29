@@ -1,7 +1,10 @@
 Devjuic::Application.routes.draw do
-  
+  resources :customers
+
+
   resources :experiments
   resources :posts
+
 
   devise_for :users
 
@@ -9,8 +12,10 @@ Devjuic::Application.routes.draw do
 
   match '/frequencies', to: 'frequencies#index'
   post '/frequencies/create', to: 'frequencies#create'
+  post '/frequencies/check', to: 'frequencies#check'
 
   match '/lab', to: 'static_pages#lab'
+  match '/store', to: 'store#index'
   match '/contact', to: 'static_pages#contact'
   match '/characters', to: 'characters#index'
   # The priority is based upon order of creation:

@@ -1,4 +1,4 @@
-class Frequency 
+class Frequency
 	attr_reader :input_text
 	
 	def initialize input_text
