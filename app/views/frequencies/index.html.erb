@@ -1,0 +1,10 @@
+<div class="center hero-unit">
+	<h4>Character Frequency Calculator</h4>
+	<%= form_tag({controller: "frequencies", action: "create"}, method: "post", remote: true) do %>
+		<%= text_field_tag(:input_text, nil, placeholder: "Enter some text.") %>
+		<%= submit_tag("Submit", class: "btn btn-primary move-up") %>
+	<% end %>
+	<div id="frequency-stats">
+		<ul></ul>
+	</div>
+</div>

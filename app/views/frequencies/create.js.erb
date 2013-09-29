@@ -1,0 +1,3 @@
+$('#frequency-stats ul').empty()
+$('#frequency-stats ul').append("<li>'<b><%= @freq.most_freq %></b>' was the most frequent character, occurring <b><%= @freq.max %></b> time(s).</li>");
+$('#frequency-stats ul').append("<li>'<b><%= @freq.least_freq %></b>' was the least frequent character, occurring <b><%= @freq.min %></b> time(s).</li>");

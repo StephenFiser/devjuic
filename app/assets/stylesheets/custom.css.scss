@@ -36,6 +36,10 @@ textarea { resize: vertical; }
 	h1{ margin-bottom: 10px; }
 }
 
+.move-up {
+	margin-top: -10px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6, { line-height: 1;}
@@ -250,5 +254,18 @@ p {
 	background-color: white;
 }
 
+/* frequency page */
 
+li { list-style: none; }
 
+/* customer pages */
+
+.customer {
+	td, th {
+		padding-left: 10px;
+	}
+	.wide {
+		width: 100px;
+		text-align: left;
+	}
+}
