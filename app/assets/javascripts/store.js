@@ -6,10 +6,6 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 
 	$scope.customers = Customer.query();
 
-	$scope.totalCustomers = $scope.customers.length;
-
-	console.log($scope.customers)
-
 	console.log("here")
 
 	$scope.createCustomer = function() {
@@ -20,7 +16,6 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 						};
 		Customer.save(newCustomer);
 		$scope.customers.push(newCustomer);
-		console.log($scope.customers)
 		$scope.customer = '';
 		$('#firstNameInput').focus();
 		$scope.customers.sort(byLastName);

@@ -45,6 +45,7 @@ class ExperimentsController < ApplicationController
 
     respond_to do |format|
       if @experiment.save
+        current_user.experiments << @experiment
         format.html { redirect_to @experiment, notice: 'Experiment was successfully created.' }
         format.json { render json: @experiment, status: :created, location: @experiment }
       else

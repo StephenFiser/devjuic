@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
   respond_to :json
   def index
-    respond_with Customer.all
+    respond_with Customer.order_by_last_name
   end
 
   def show
