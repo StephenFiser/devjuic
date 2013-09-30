@@ -4,7 +4,7 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 
 	var Customer = $resource('/customers/:id', {id: '@id'});
 
-	$scope.customers = Customer.query();
+	$scope.customers = Customer.query().sort(byLastName);
 
 	console.log("here")
 
@@ -14,11 +14,14 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 							last_name: $scope.customer.last_name,
 							status: $scope.customer.status
 						};
-		Customer.save(newCustomer);
-		$scope.customers.push(newCustomer);
-		$scope.customer = '';
-		$('#firstNameInput').focus();
-		$scope.customers.sort(byLastName);
+		Customer.save(newCustomer, function(success) {
+			$scope.customers.push(newCustomer);
+			$scope.customer = '';
+			$('#firstNameInput').focus();
+		}, function(error) {
+			console.log(error);
+		});
+		$scope.customers = Customer.query();
 	};
 
 	$scope.removeCustomer = function(index) {
