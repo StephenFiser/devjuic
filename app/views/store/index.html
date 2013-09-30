@@ -24,7 +24,7 @@
       <tr ng-repeat="customer in customers | orderBy: 'last_name'">
         <td class="wide">{{customer.last_name}}, {{customer.first_name}}</td>
         <td class="wide">{{customer.status}}</td>
-        <td><a href="#"><i class="icon-remove" ng-click="removeCustomer($index)"></i></a></td>
+        <td><a href="#"><i class="icon-remove" ng-click="removeCustomer(customer.id)"></i></a></td>
       </tr>
     </table>
   </div>

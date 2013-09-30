@@ -4,9 +4,7 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 
 	var Customer = $resource('/customers/:id', {id: '@id'});
 
-	$scope.customers = Customer.query().sort(byLastName);
-
-	console.log("here")
+	$scope.customers = Customer.query();
 
 	$scope.createCustomer = function() {
 		var newCustomer = {
@@ -21,19 +19,13 @@ app.controller('CustomerCtrl', ['$scope', '$resource', function($scope, $resourc
 		}, function(error) {
 			console.log(error);
 		});
-		$scope.customers = Customer.query();
+		$scope.customers = Customer.query(); // Calling this updates the customer model after it has been saved
 	};
 
-	$scope.removeCustomer = function(index) {
-		$scope.customers[index].$delete();
-		$scope.customers.splice(index, 1);
+	$scope.removeCustomer = function(customerId) {
+		Customer.delete({id: customerId}, function(success) {
+			console.log("Customer deleted.");
+			$scope.customers = Customer.query();
+		});
 	};
-
-	function byLastName(a,b) {
-	  if (a.last_name < b.last_name)
-	     return -1;
-	  if (a.last_name > b.last_name)
-	    return 1;
-	  return 0;
-	}
 }]);
