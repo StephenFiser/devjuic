@@ -1,4 +1,6 @@
 Devjuic::Application.routes.draw do
+  devise_for :guests
+
   resources :customers
 
 

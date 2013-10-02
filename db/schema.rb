@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131002005749) do
+ActiveRecord::Schema.define(:version => 20131002015437) do
 
   create_table "customers", :force => true do |t|
     t.string   "first_name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20131002005749) do
     t.text     "description"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "guest_id"
+    t.text     "guest_list"
   end
 
   create_table "experiments", :force => true do |t|
@@ -37,6 +39,27 @@ ActiveRecord::Schema.define(:version => 20131002005749) do
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
   end
+
+  create_table "guests", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "guests", ["email"], :name => "index_guests_on_email", :unique => true
+  add_index "guests", ["reset_password_token"], :name => "index_guests_on_reset_password_token", :unique => true
 
   create_table "locations", :force => true do |t|
     t.string   "street_address"
